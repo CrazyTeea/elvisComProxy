@@ -44,7 +44,7 @@ namespace ElvisComProxy
 
         public string lightOpen()
         {
-            return "*addr: " + _positionsLeds[Position] + ";cmd: strobe; level: 100;" + "time:" + GetLength() * 1000 +
+            return "*addr: " + _positionsLeds[Position] + ";cmd: strobe; level: 20;" + "time:" + GetLength() * 1000 +
                    ";freq: " + Frequency + ";#";
         }
 
@@ -90,6 +90,14 @@ namespace ElvisComProxy
                 catch (Exception e)
                 {
                     Console.WriteLine(e.Message);
+                    try
+                    {
+                        serialPort.Close();
+                    }
+                    catch (Exception exception)
+                    {
+                        Console.WriteLine(exception.Message);
+                    }
                 }
 
                 Console.WriteLine("stopping thread");
