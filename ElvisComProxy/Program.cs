@@ -27,7 +27,7 @@ namespace ElvisComProxy
 
         public int GetLength()
         {
-            return Length ?? 350;
+            return Length ?? 60;
         }
 
         private Thread? _thread;
