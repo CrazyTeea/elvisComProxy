@@ -44,7 +44,7 @@ namespace ElvisComProxy
 
         public string lightOpen()
         {
-            return "*addr: " + _positionsLeds[Position] + ";cmd: strobe; level: 5;" + "time:" + GetLength() * 1000 +
+            return "*addr: " + _positionsLeds[Position] + ";cmd: strobe; level: 2;" + "time:" + GetLength() * 1000 +
                    ";freq: " + Frequency + ";#";
         }
 
